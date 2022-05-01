@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+li a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+}
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 1000;
+    transition: 0.6s;
+}
+header img{
+    width: 220px;
+    height: 100px;
+}
+.sticky{
+    background: #131313;
+    transition: 0.5s;
+}
+
+/* ===== Navbar Section Styling ===== */
+.navbar {
+    list-style: none; 
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar li a {
+    transition: 0.3s ease-in-out;
+}
+
+.navbar li a:hover {
+    color: #555548;
+}
+
+/* ===== Hero Section Styling ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero video {
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: #131313;
+    opacity: 0.7;
+}
+
+.textbox {
+    background-size: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 3rem;
+    color: #fff;
+    z-index: 3;
+    text-transform: uppercase;
+}
+
+.textbox h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    animation: anim 0.5s;
+}
+
+@keyframes anim {
+    0% {
+        margin-top: -100px;
+        opacity: 0;
+    }
+    16% {
+        margin-top: -80px;
+        opacity: 0.3;
+    }
+    33% {
+        margin-top: -60px;
+        opacity: 0.5;
+    }
+    50% {
+        margin-top: -40px;
+        opacity: 0.7;
+    }
+    66% {
+        margin-top: -20px;
+        opacity: 0.8;
+    }
+    82% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+.hero__btn {
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    height: auto;
+    color: #fff;
+    background: #131313;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 12px 34px;
+    font-size: 13px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero__btn:hover {
+    border: 1px solid #555548;
+    background: #555548;
+    transition: 1s;
+}
+
+/* ===== About Section Styling ===== */
+.about {
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.about h1 {
+    font-size: 36px;
+    font-weight: 600;
+    transition: 2s;
+}
+
+.about__h1{
+    opacity: 0;
+}
+
+.about p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-col {
+    flex-basis: 50%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.about-col p {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* ----- About Section IMG Stacked ----- */
+.gallery-section {
+    position: relative;
+}
+
+.gallery-section img {
+    width: 300px;
+    position: absolute;
+    transition: all .5s;
+}
+
+.img1 {
+    left: 10%;
+    top: 0px;
+}
+
+.img2 {
+    left: 15%;
+    top: -20px;
+    border-radius: 24px;
+    box-shadow: -3px 1px 5px rgba(4, 9, 30, 0.7);
+}
+
+.img2:hover{
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ===== Products Section Styling ===== */
+.products {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.products h1 {
+    font-size: 36px;
+    font-weight: 600;
+    transition: 2s;
+}
+.products-container{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 70vh;
+    width: 80%;
+    margin: auto;
+}
+
+.product-col {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-content{
+    margin-right: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+.product-col h1{
+    text-align: left;
+}
+
+.product-col p {
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.product-gallery{
+    width: 500px;
+    margin: auto;
+}
+
+
+
+/* ===== Swiper JS CSS ===== */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+/* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Footer Container ===== */
+
+.pendaftaran {
+    background-color: #131313;
+}
+
+.pendaftaran-container{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    transition: 0.6s;
+}
+
+.pendaftaran h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.pendaftaran p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 20px;
+}
+
+.baris {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kolom-pendaftaran {
+    flex-basis: 50%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+.kolom-pendaftaran p {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.kolom-pendaftaran img {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    filter: invert(100%);
+}
+
+.content form .detail-user{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    
+}
+form .detail-user .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.detail-user .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.detail-user .input-box .upload input{
+    display: flex;
+}
+
+.detail-user .input-box input:focus,
+.detail-user .input-box input:valid{
+    border-color: #9b59b6;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+    visibility: hidden;
+}
+form .category{
+    display: flex;
+    width: 100%;
+    margin: 14px 0 ;
+    justify-content: space-evenly;
+}
+form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+form .category label .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+    background: #9b59b6;
+    border-color: #d9d9d9;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 35px 0
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .button input:hover{
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+.selection {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+}
+
+.data-pendaftar {
+    text-align: center;
+    color: #131313;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+table td {
+    background: #fff;
+    text-align: center;
+    table-layout: fixed;
+    width: 250px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.informasi {
+    margin-top: 50px;
+    height: 20vh;
+}
+
+.tombol-daftar {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.tombol-daftar a {
+    text-decoration: none;
+}
+
+.tombol-daftar:hover{
+    border: 1px solid rgb(132, 0, 255);
+    background: rgb(0, 110, 255);
+    transition: 1s;
+}
+
+.icons-wrapper{
+    position: relative;
+}
+
+.icons-wrapper::after{
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: rgb(37, 37, 37);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+/* ======================== */
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 0s ease-in-out infinite; 
+}
+
+.icon:hover{
+    color: #fff;
+}
+
+.ri-instagram-line{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* This is the first item so no animation delay needed.*/
+}
+
+.ri-facebook-circle-line{
+    color: #1877f2;
+    animation-delay: 1s; /* Adds a animation delay of 1 seconds.*/
+}
+
+.ri-whatsapp-line{
+    color: #25d366;
+    animation-delay: 2s; /* Adds a animation delay of 2 seconds.*/
+}
+
+
+
+@keyframes float {
+    0%{
+        transform: translateY(0); /*The starting point of the animation is 0.*/
+    }
+    50%{
+        transform: translateY(-15px); /*The middle point of the animation is -15xp. This will move the element up.*/
+    }
+    100%{
+        transform: translateY(0); /*The last point of the animation is going back to the starting state of 0.*/
+    }
+}
